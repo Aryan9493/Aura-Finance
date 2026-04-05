@@ -6,7 +6,7 @@ import '../../features/dashboard/presentation/screens/dashboard_screen.dart';
 import '../../features/transactions/presentation/screens/transactions_screen.dart';
 import '../../features/insights/presentation/screens/insights_screen.dart';
 import '../../features/goals/presentation/screens/goals_screen.dart';
-import '../../features/mood/presentation/screens/mood_screen.dart';
+import '../../features/settings/presentation/screens/settings_screen.dart';
 import '../widgets/scaffold_with_nav_bar.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -69,10 +69,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                name: 'mood',
-                path: '/mood',
+                name: 'settings',
+                path: '/settings',
                 pageBuilder: (context, state) => const NoTransitionPage(
-                  child: MoodScreen(),
+                  child: SettingsScreen(),
                 ),
               ),
             ],
